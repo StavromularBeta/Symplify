@@ -1,0 +1,67 @@
+This is the readme for Symplify.
+
+the Symbiot sample workstation is specifically designed to accelerate mass spectroscopy.
+the goal of Symplify is to create software that makes deviations from the intended use of the machine easier.
+the general idea is to
+    understand the components and capabilities of the system
+    use the components and capabilities in novel ways
+
+the first version of Symplify aims to develop a system where liquid can be taken from one or two resevoirs and
+injected into 96-well sample plates in identical, incremental, or specific amounts multiple times.
+
+Symbiot reads some file.TLL when writing and editing methods and tests. Those files, when opened up as plaintext,
+are essentially combinations of numbers and words separated by semicolons that signify different options that pop up
+as you create/edit a method/test.
+
+each group has tests, which have Steps. In these steps, there are commands that make the arm do things.
+
+G;1;Sample and Matrix;1;0;65;
+Group;GroupNumber;GroupTitle;MaxTestsPerPlate;OutputFormats;OptimizingMode;
+
+This is the first line in a group.
+
+G specifies that this line is a group
+The groupNumber is the group number, 1 being the first group in the file
+the GroupTitle is the name of the group
+these variables are accessed by double clicking on "group" in the GUI, and refer to
+various options/boxes/text inputs in said menus.
+
+max tests per plate = 1
+Output Formats - none are checked at 0
+numbers don't correspond to anything in particular, for example 11 is the first three
+checked and 15 is the first four checked. There are 8 options.
+the last number in the sequence refers to the optimizing mode. Don't really know what
+any of these actually are.
+
+The W values
+W values refer to the type of Step being added.
+Pre Reagent = 256, Control(Before Samples) = Unknown(possibly 521), Sample = 1024,
+EndControl(After Samples) = Unknown(possibly 2048), Post Reagent = 4096
+
+#T;101;Sample(SP)/Matrix(SP);0;0;0;;MALDI 10x10 on row 16;
+#Test;TestNumber;TestName;MaxTime;Unknown;Utilization;PredilutionRack(optional);DestinationRack;
+
+this is the second line in a group, and it defines a test.
+
+G;1;Sample and Matrix;1;0;65;
+T;101;Sample(SP)/Matrix(SP);0;0;0;;MALDI 10x10 on row 16;
+W;1024;
+S;;1.000; - dunno yet. Always after every W command, always this line.
+
+next comes C;1.00;1;SAMPLE;262210;0;0;0;2;0;0;
+		   #Command;Volume;Unknown;Location;Unknown;Unknown;Unknown;Unknown;LiquidClass(Dropdown);Unknown;Unknown;
+
+This line refers to the Draw step.
+for the unknown 6 digit number, the last two digits are 10 if single pipetting, 9 for multi
+C is command, or something similar.
+
+C;1.00;4;;262170;0;0;0;1;1;0;
+Command;Volume;LocationModifier;Location;Unknown;Unknown;Unknown;Unknown;LiquidClass(Dropdown);Unknown;Unknown
+
+This line refers to the Drop & DITI step
+
+The second two values are pairs corresponding to different selections of Location.
+1;sample; = sample
+4;; = Dest. Rack
+8;ReagentName; = Reagent (Reagent name is selected from a dropdown list).
+16;; = Waste.
