@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d6e67c4-552f-460f-be1d-f6d8e0e56655" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symplify/DrawGenerator.py" afterPath="$PROJECT_DIR$/Symplify/DrawGenerator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symplify/DropGenerator.py" afterPath="$PROJECT_DIR$/Symplify/DropGenerator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symplify/StepGenerator.py" afterPath="$PROJECT_DIR$/Symplify/StepGenerator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symplify/TestGenerator.py" afterPath="$PROJECT_DIR$/Symplify/TestGenerator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GUI/GUI.py" afterPath="$PROJECT_DIR$/GUI/GUI.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symplify/MakeMethod.py" afterPath="$PROJECT_DIR$/Symplify/MakeMethod.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GUI/SampleRackGenerator.py" afterPath="$PROJECT_DIR$/GUI/SampleRackGenerator.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GUI/WellGenerator.py" afterPath="$PROJECT_DIR$/GUI/WellGenerator.py" />
     </list>
     <ignored path="Symplify.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,84 +28,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="README" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README">
+      <file leaf-file-name="GUI.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/GUI/GUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.407408" vertical-offset="331" max-vertical-offset="1080">
-              <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GroupGenerator.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Symplify/GroupGenerator.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-              <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.75951904" vertical-offset="251" max-vertical-offset="750">
+              <caret line="53" column="14" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
               <folding>
-                <element signature="e#580#682#0" expanded="false" />
-                <element signature="e#751#1276#0" expanded="false" />
-                <element signature="e#1351#1431#0" expanded="false" />
+                <element signature="e#22#42#0" expanded="true" />
+                <element signature="e#837#1021#0" expanded="false" />
+                <element signature="e#1489#1736#0" expanded="false" />
+                <element signature="e#1786#2055#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DropGenerator.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Symplify/DropGenerator.py">
+      <file leaf-file-name="SampleRackGenerator.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GUI/SampleRackGenerator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.57114226" vertical-offset="0" max-vertical-offset="499">
-              <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+              <caret line="55" column="46" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
               <folding>
-                <element signature="e#572#675#0" expanded="false" />
-                <element signature="e#744#1418#0" expanded="false" />
-                <element signature="e#1491#1569#0" expanded="false" />
+                <element signature="e#159#404#0" expanded="false" />
+                <element signature="e#699#1306#0" expanded="false" />
+                <element signature="e#1393#1626#0" expanded="false" />
+                <element signature="e#1700#2795#0" expanded="false" />
+                <element signature="e#2867#3050#0" expanded="false" />
+                <element signature="e#3129#3351#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestGenerator.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Symplify/TestGenerator.py">
+      <file leaf-file-name="WellGenerator.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GUI/WellGenerator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-              <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+              <caret line="65" column="35" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
               <folding>
-                <element signature="e#559#659#0" expanded="false" />
-                <element signature="e#728#1439#0" expanded="false" />
-                <element signature="e#1513#1591#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StepGenerator.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Symplify/StepGenerator.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding>
-                <element signature="e#395#594#0" expanded="false" />
-                <element signature="e#651#807#0" expanded="false" />
-                <element signature="e#854#906#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DrawGenerator.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Symplify/DrawGenerator.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-              <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
-              <folding>
-                <element signature="e#572#675#0" expanded="false" />
-                <element signature="e#744#1418#0" expanded="false" />
-                <element signature="e#1491#1569#0" expanded="false" />
+                <element signature="e#134#256#0" expanded="false" />
+                <element signature="e#509#957#0" expanded="false" />
+                <element signature="e#1023#1318#0" expanded="false" />
+                <element signature="e#1397#2270#0" expanded="false" />
+                <element signature="e#2334#2546#0" expanded="false" />
+                <element signature="e#2653#3223#0" expanded="false" />
+                <element signature="e#3288#3378#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -129,12 +95,15 @@
         <option value="$PROJECT_DIR$/README" />
         <option value="$PROJECT_DIR$/Main/method.py" />
         <option value="$PROJECT_DIR$/Main/creator.py" />
-        <option value="$PROJECT_DIR$/GUI/GUI.py" />
         <option value="$PROJECT_DIR$/Symplify/GroupGenerator.py" />
         <option value="$PROJECT_DIR$/Symplify/TestGenerator.py" />
         <option value="$PROJECT_DIR$/Symplify/StepGenerator.py" />
         <option value="$PROJECT_DIR$/Symplify/DrawGenerator.py" />
         <option value="$PROJECT_DIR$/Symplify/DropGenerator.py" />
+        <option value="$PROJECT_DIR$/Symplify/MakeMethod.py" />
+        <option value="$PROJECT_DIR$/GUI/WellGenerator.py" />
+        <option value="$PROJECT_DIR$/GUI/SampleRackGenerator.py" />
+        <option value="$PROJECT_DIR$/GUI/GUI.py" />
       </list>
     </option>
   </component>
@@ -397,10 +366,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32965517" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32694763" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32694763" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25355273" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -543,52 +512,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/GUI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="1020">
-          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
-          <folding>
-            <element signature="e#22#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Symplify/DrawGenerator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
-          <folding>
-            <element signature="e#572#675#0" expanded="false" />
-            <element signature="e#744#1418#0" expanded="false" />
-            <element signature="e#1491#1569#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Symplify/StepGenerator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="e#395#594#0" expanded="false" />
-            <element signature="e#651#807#0" expanded="false" />
-            <element signature="e#854#906#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Symplify/TestGenerator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-          <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
-          <folding>
-            <element signature="e#559#659#0" expanded="false" />
-            <element signature="e#728#1439#0" expanded="false" />
-            <element signature="e#1513#1591#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Symplify/GroupGenerator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
@@ -603,12 +526,102 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Symplify/DropGenerator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57114226" vertical-offset="0" max-vertical-offset="499">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
           <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
           <folding>
             <element signature="e#572#675#0" expanded="false" />
             <element signature="e#744#1418#0" expanded="false" />
             <element signature="e#1491#1569#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Symplify/MakeMethod.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03006012" vertical-offset="0" max-vertical-offset="540">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="e#22#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Symplify/TestGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.57114226" vertical-offset="0" max-vertical-offset="499">
+          <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+          <folding>
+            <element signature="e#559#659#0" expanded="false" />
+            <element signature="e#728#1439#0" expanded="false" />
+            <element signature="e#1513#1591#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Symplify/StepGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54108214" vertical-offset="0" max-vertical-offset="499">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="e#395#594#0" expanded="false" />
+            <element signature="e#651#807#0" expanded="false" />
+            <element signature="e#854#906#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Symplify/DrawGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.57114226" vertical-offset="0" max-vertical-offset="499">
+          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+          <folding>
+            <element signature="e#572#675#0" expanded="false" />
+            <element signature="e#744#1418#0" expanded="false" />
+            <element signature="e#1491#1569#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/SampleRackGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+          <caret line="55" column="46" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
+          <folding>
+            <element signature="e#159#404#0" expanded="false" />
+            <element signature="e#699#1306#0" expanded="false" />
+            <element signature="e#1393#1626#0" expanded="false" />
+            <element signature="e#1700#2795#0" expanded="false" />
+            <element signature="e#2867#3050#0" expanded="false" />
+            <element signature="e#3129#3351#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/WellGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+          <caret line="65" column="35" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
+          <folding>
+            <element signature="e#134#256#0" expanded="false" />
+            <element signature="e#509#957#0" expanded="false" />
+            <element signature="e#1023#1318#0" expanded="false" />
+            <element signature="e#1397#2270#0" expanded="false" />
+            <element signature="e#2334#2546#0" expanded="false" />
+            <element signature="e#2653#3223#0" expanded="false" />
+            <element signature="e#3288#3378#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/GUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.75951904" vertical-offset="251" max-vertical-offset="750">
+          <caret line="53" column="14" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
+          <folding>
+            <element signature="e#22#42#0" expanded="true" />
+            <element signature="e#837#1021#0" expanded="false" />
+            <element signature="e#1489#1736#0" expanded="false" />
+            <element signature="e#1786#2055#0" expanded="false" />
           </folding>
         </state>
       </provider>

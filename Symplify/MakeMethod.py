@@ -5,21 +5,21 @@ from StepGenerator import StepGenerator
 from DrawGenerator import DrawGenerator
 from DropGenerator import DropGenerator
 
-Group = GroupGenerator('Peter',1)
-GroupLine = Group.GroupLineGenerator()
+Group = GroupGenerator('Peter', 1)
+GroupLine = Group.group_generator()
 
-Test = TestGenerator('Peter',1)
-TestLine = Test.TestLineGenerator()
+Test = TestGenerator('Peter', 1)
+TestLine = Test.test_generator()
 
 Step = StepGenerator(1024)
-StepTypeLine = Step.StepTypeGenerator()
-FillerLine = Step.FillerLineGenerator()
+StepTypeLine = Step.step_generator()
+FillerLine = Step.filler_line_generator()
 
-Draw = DrawGenerator(1.00,'1;SAMPLE;')
-DrawLine = Draw.DrawGenerator()
+Draw = DrawGenerator(1.00, '1;SAMPLE;')
+DrawLine = Draw.draw_generator()
 
-Drop = DropGenerator(1.00,'4;;')
-DropLine = Drop.DropGenerator()
+Drop = DropGenerator(1.00, '4;;')
+DropLine = Drop.drop_generator()
 
 print GroupLine
 print TestLine
