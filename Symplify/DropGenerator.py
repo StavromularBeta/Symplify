@@ -1,41 +1,40 @@
 #!/usr/bin/env python
 class DropGenerator():
 
-	def __init__(self, DropVolume, DropLocation):
-		self.DropVolume = DropVolume
-		self.DropLocation = DropLocation
-		self.GeneratedDropLine = 'string'
+    def __init__(self, drop_volume, drop_location):
+        self.drop_volume = drop_volume
+        self.drop_location = drop_location
+        self.drop_line = 'string'
 
-	def DropGenerator(self):
-		KnownVariables = self.GenerateKnownVariables()
-		KnownAndUnknownVariables = self.GenerateUnknownVariables(KnownVariables)
-		GeneratedDropLine = self.GenerateDropLine(KnownAndUnknownVariables)
-		self.GeneratedDropLine = GeneratedDropLine
-		return GeneratedDropLine
-	
-	def GenerateKnownVariables(self):
-		KnownVariables = "C;"+str(self.DropVolume)+";"+str(self.DropLocation)
-		return KnownVariables
-		
-	def GenerateUnknownVariables(self, KnownVariables):
-		unknown1 = 262170
-		unknown2 = 0
-		unknown3 = 0
-		unknown4 = 0
-		unknown5 = 1
-		unknown6 = 1
-		unknown7 = 0
-		KnownAndUnknownVariables = [KnownVariables,
-									str(unknown1),
-									str(unknown2),
-									str(unknown3),
-									str(unknown4),
-									str(unknown5),
-									str(unknown6),
-									str(unknown7),]
-		return KnownAndUnknownVariables
-		
-	def GenerateDropLine(self,KnownAndUnknownVariables):
-		DropLine = ';'.join(KnownAndUnknownVariables)+';'
-		return DropLine
-		
+    def drop_generator(self):
+        known_variables = self.generate_known_variables()
+        known_and_unknown_variables = self.generate_unknown_variables(known_variables)
+        drop_line = self.generate_drop_line(known_and_unknown_variables)
+        self.drop_line = drop_line
+        return drop_line
+
+    def generate_known_variables(self):
+        known_variables = "C;"+str(self.drop_volume)+";"+str(self.drop_location)
+        return known_variables
+
+    def generate_unknown_variables(self, known_variables):
+        unknown_one = 262170
+        unknown_two = 0
+        unknown_three = 0
+        unknown_four = 0
+        unknown_five = 1
+        unknown_six = 1
+        unknown_seven = 0
+        known_and_unknown_variables = [known_variables,
+                                       str(unknown_one),
+                                       str(unknown_two),
+                                       str(unknown_three),
+                                       str(unknown_four),
+                                       str(unknown_five),
+                                       str(unknown_six),
+                                       str(unknown_seven)]
+        return known_and_unknown_variables
+
+    def generate_drop_line(self, known_and_unknown_variables):
+        drop_line = ';'.join(known_and_unknown_variables)+';'
+        return drop_line
