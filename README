@@ -1,4 +1,4 @@
-This is the readme for Symplify.
+This is the readme for Symplify. It is incoherent.
 
 the Symbiot sample workstation is specifically designed to accelerate mass spectroscopy.
 the goal of Symplify is to create software that makes deviations from the intended use of the machine easier.
@@ -49,7 +49,7 @@ W;1024;
 S;;1.000; - dunno yet. Always after every W command, always this line.
 
 next comes C;1.00;1;SAMPLE;262210;0;0;0;2;0;0;
-		   #Command;Volume;Unknown;Location;Unknown;Unknown;Unknown;Unknown;LiquidClass(Dropdown);Unknown;Unknown;
+		   #Command;Volume;LocationModifier;Location;Unknown;Unknown;Unknown;Unknown;LiquidClass(Dropdown);Unknown;Unknown;
 
 This line refers to the Draw step.
 for the unknown 6 digit number, the last two digits are 10 if single pipetting, 9 for multi
