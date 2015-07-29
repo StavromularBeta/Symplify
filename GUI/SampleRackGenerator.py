@@ -56,5 +56,5 @@ class SampleRackGenerator():
     def small_well_coordinate_generator(self, small_x_0, small_y_0):
         x_1 = small_y_0 + 2*self.radius_of_small_samples
         y_1 = small_y_0 + 2*self.radius_of_small_samples
-        next_x_0 = Xone + 0.5*self.radius_of_small_samples
+        next_x_0 = x_1 + 0.5*self.radius_of_small_samples
         return [small_x_0, small_y_0, x_1, y_1, next_x_0]

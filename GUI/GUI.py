@@ -44,7 +44,7 @@ class Application(tk.Frame):  # Application class inherits from Tkinter's Frame 
         return self.recieving_plate
 
     def solution_plate_generator(self):
-        self.solution_plate = tk.Canvas(self, width=x, height=4*RadiusOfWell, bg='#1E90FF')
+        self.solution_plate = tk.Canvas(self, width=x, height=4*radius_of_wells, bg='#1E90FF')
         for keys, values in sample_coordinates.items():
             oval = self.solution_plate.create_oval(values[0], values[1], values[2], values[3])
         return self.solution_plate
