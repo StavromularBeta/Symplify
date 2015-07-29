@@ -14,18 +14,20 @@ LargeSample = 4
 SmallSample = 4
 LargeSampleRadius = 20
 
-GridtoGenerate = RecievingPlateGenerator(WellsInRow,WellsInColumn,RadiusOfWell)
-SampleRack = SampleRackGenerator(LargeSample,SmallSample,LargeSampleRadius)
-SampleCoordinates = SampleRack.SampleGrid()		
-CoordinatesOfWells = GridtoGenerate.WellGrid()
+Grid_to_generate = RecievingPlateGenerator(WellsInRow, WellsInColumn, RadiusOfWell)
+Sample_rack = SampleRackGenerator(LargeSample, SmallSample, LargeSampleRadius)
+Sample_coordinates = Sample_rack.SampleGrid()
+CoordinatesOfWells = Grid_to_generate.WellGrid()
 x = CoordinatesOfWells[LastWell][2] 
 y = CoordinatesOfWells[LastWell][3]
 
-class Application(tk.Frame): #Application class inherits from Tkinter's Frame class
-	def __init__(self, master=None):
-		tk.Frame.__init__(self, master) #calls the constructor for the parent class, Frame
-		self.grid() #so the application actually appears on screen
-		self.CreateWidgets()
+
+class Application(tk.Frame):  # Application class inherits from Tkinter's Frame class
+
+    def __init__(self, master=None):
+        tk.Frame.__init__(self, master)  # calls the constructor for the parent class, Frame
+        self.grid()   # so the application actually appears on screen
+        self.CreateWidgets()
 		
 	def CreateWidgets(self):
 		self.quitButton = tk.Button(self, text='Exit Symplify',
