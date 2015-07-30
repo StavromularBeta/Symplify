@@ -54,9 +54,9 @@ class RecievingPlateGenerator():
     def enter_last_coordinate(self, penultimate_coordinate, endrange, finished_row_coordinates):
         final_coordinates = finished_row_coordinates
         if penultimate_coordinate == endrange:
-            final_x_0 = final_coordinates[penultimate_coordinate][0] + 2*self.RadiusOfWells
+            final_x_0 = final_coordinates[penultimate_coordinate][0] + 2*self.well_radius
             final_y_0 = final_coordinates[penultimate_coordinate][1]
-            final_x_1 = final_coordinates[penultimate_coordinate][2] + 2*self.RadiusOfWells
+            final_x_1 = final_coordinates[penultimate_coordinate][2] + 2*self.well_radius
             final_y_1 = final_coordinates[penultimate_coordinate][3]
             ultimate_coordinate = [final_x_0, final_y_0, final_x_1, final_y_1]
             final_coordinates[penultimate_coordinate+1] = ultimate_coordinate

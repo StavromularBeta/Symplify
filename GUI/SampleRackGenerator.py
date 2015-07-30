@@ -29,7 +29,7 @@ class SampleRackGenerator():
         x_1 = starting_x_0 + 2*self.radius_of_large_samples
         y_1 = starting_y_0 + 2*self.radius_of_large_samples
         next_x_0 = x_1 + 0.5*self.radius_of_large_samples
-        return [starting_y_0, starting_y_0, x_1, y_1, next_x_0]
+        return [starting_x_0, starting_y_0, x_1, y_1, next_x_0]
 
     def small_sample_generator(self, large_sample_coordinates):
         large_and_small_sample_coordinates = large_sample_coordinates
@@ -38,7 +38,7 @@ class SampleRackGenerator():
         small_sample_x_0_y_0 = self.small_x_0_y_0_generator(last_well_coordinates)
         small_x_0 = small_sample_x_0_y_0[0]
         small_y_0 = small_sample_x_0_y_0[1]
-        for well in range(1,self.number_of_small_samples+1):
+        for well in range(1, self.number_of_small_samples+1):
             small_well_index = well+(self.number_of_large_samples-1)
             small_sample_coordinate = self.small_well_coordinate_generator(small_x_0, small_y_0)
             small_x_0 = small_sample_coordinate[4]
@@ -54,7 +54,7 @@ class SampleRackGenerator():
         return [small_x_0, small_y_0]
 
     def small_well_coordinate_generator(self, small_x_0, small_y_0):
-        x_1 = small_y_0 + 2*self.radius_of_small_samples
+        x_1 = small_x_0 + 2*self.radius_of_small_samples
         y_1 = small_y_0 + 2*self.radius_of_small_samples
         next_x_0 = x_1 + 0.5*self.radius_of_small_samples
         return [small_x_0, small_y_0, x_1, y_1, next_x_0]

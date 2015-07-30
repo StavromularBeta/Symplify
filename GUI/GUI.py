@@ -13,6 +13,7 @@ last_well = wells_in_row*wells_in_column
 large_samples = 4
 small_samples = 4
 large_sample_radius = 20
+last_well_in_samples = large_samples+small_samples-1
 
 grid_to_generate = RecievingPlateGenerator(wells_in_row, wells_in_column, radius_of_wells)
 sample_rack = SampleRackGenerator(large_samples, small_samples, large_sample_radius)
@@ -20,6 +21,7 @@ sample_coordinates = sample_rack.sample_generator()
 coordinates_of_wells = grid_to_generate.well_generator()
 x = coordinates_of_wells[last_well][2]
 y = coordinates_of_wells[last_well][3]
+x_sample = sample_coordinates[last_well_in_samples][2]
 
 
 class Application(tk.Frame):  # Application class inherits from Tkinter's Frame class
@@ -44,13 +46,13 @@ class Application(tk.Frame):  # Application class inherits from Tkinter's Frame 
         return self.recieving_plate
 
     def solution_plate_generator(self):
-        self.solution_plate = tk.Canvas(self, width=x, height=4*radius_of_wells, bg='#1E90FF')
+        self.solution_plate = tk.Canvas(self, width=x_sample, height=4*radius_of_wells, bg='#1E90FF')
         for keys, values in sample_coordinates.items():
             oval = self.solution_plate.create_oval(values[0], values[1], values[2], values[3])
         return self.solution_plate
 
 app = Application()
-app.master.title('Sample application')
+app.master.title('Symplify')
 app.mainloop()
 
 # instantiating, giving a title, Starting the main loop.
