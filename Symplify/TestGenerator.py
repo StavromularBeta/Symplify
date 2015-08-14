@@ -9,7 +9,7 @@ class TestGenerator():
     def test_generator(self):
         known_variables = self.generate_known_variables()
         known_and_unknown_variables = self.generate_unknown_variables(known_variables)
-        test_line = self.GenerateTestLine(known_and_unknown_variables)
+        test_line = self.test_line_generator(known_and_unknown_variables)
         self.test_line = test_line
         return test_line
 
