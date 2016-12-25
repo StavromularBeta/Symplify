@@ -35,9 +35,15 @@ class Application(tk.Frame):  # Application class inherits from Tkinter's Frame 
         self.quit_button = tk.Button(self, text='Exit Symplify', command=self.quit)  # creates a button labeled Quit
         self.recieving_plate = self.recieving_plate_generator()
         self.solution_plate = self.solution_plate_generator()
-        self.recieving_plate.grid()
-        self.solution_plate.grid()
-        self.quit_button.grid()  # places the button in the application
+        self.recieving_plate.grid(row=1, column=1)
+        self.solution_plate.grid(row=2, column=1)
+        self.quit_button.grid(row=3, column=1)  # places the button in the application
+        self.options_generator()
+
+    def options_generator(self):
+        self.option_variable = tk.StringVar()
+        self.options1 = tk.Radiobutton(self, text="Increments", variable=self.option_variable, value=1).grid(row=3, column=2)
+        self.options2 = tk.Radiobutton(self, text="Constant", variable=self.option_variable, value=2).grid(row=3, column=3)
 
     def recieving_plate_generator(self):
         self.recieving_plate = tk.Canvas(self, width=x, height=y)
