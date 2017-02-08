@@ -4,6 +4,10 @@ from TestGenerator import TestGenerator
 from StepGenerator import StepGenerator
 from DrawGenerator import DrawGenerator
 from DropGenerator import DropGenerator
+from HeaderGenerator import HeaderGenerator
+
+Header = HeaderGenerator()
+Header_line = Header.header_generator()
 
 Group = GroupGenerator('Peter', 1)
 GroupLine = Group.group_generator()
@@ -21,6 +25,7 @@ DrawLine = Draw.draw_generator()
 Drop = DropGenerator(1.00, '4;;')
 DropLine = Drop.drop_generator()
 
+print Header_line
 print GroupLine
 print TestLine
 print StepTypeLine
