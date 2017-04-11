@@ -15,7 +15,7 @@ class GroupGenerator():
     def __init__(self, group_name, group_number):
         """
         The group name is the name of the group that the test belongs to. The group number is the number of the group.
-        The group line is the object representing the line of SymbiotCode this class generates.
+        The group line is the object representing the line of Symbiot Code this class generates.
         """
         self.group_name = str(group_name)
         self.group_number = group_number
