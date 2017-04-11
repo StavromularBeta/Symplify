@@ -5,16 +5,14 @@ from StepGenerator import StepGenerator
 from DrawGenerator import DrawGenerator
 from DropGenerator import DropGenerator
 from HeaderGenerator import HeaderGenerator
+from TLLGenerator import TLLGenerator
 from sys import argv
-
 MakeMethod, TLLfile = argv
-target = open(TLLfile, 'w')
-target.truncate()
 
 Header = HeaderGenerator()
 Header_line = Header.header_generator()
 
-Group = GroupGenerator('Peter', 1)
+Group = GroupGenerator('PeterLevett', 1)
 GroupLine = Group.group_generator()
 
 Test = TestGenerator('Peter', 1)
@@ -32,8 +30,5 @@ DropLine = Drop.drop_generator()
 
 linelist = [Header_line,GroupLine,TestLine,StepTypeLine,FillerLine,DrawLine,DropLine]
 
-for item in linelist:
-    target.write(item)
-    target.write('\n')
-
-target.close()
+FileGenerator = TLLGenerator(linelist, TLLfile)
+FileGenerator.tll_generator()
