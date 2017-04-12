@@ -5,6 +5,7 @@ class TLLGenerator():
 
     Method Hierarchy:
         tll_generator
+        report_generator
     """
 
     def __init__(self, linelist, TLLfile):
@@ -22,3 +23,22 @@ class TLLGenerator():
             target.write(item)
             target.write('\n')
         target.close()
+
+    def report_generator(self):
+        """
+        This function generates a report on the test produced by the TLL file generated. It is easier to read than the
+        TLL file. It currently only is capable of generating the report up to the step type.
+        """
+        print "-------------------------------------------"
+        print "-------------------------------------------"
+        print "Group: " + self.linelist[1].split(";")[2] + " (" + self.linelist[1].split(";")[1] + ")"
+        print "Test: " + self.linelist[2].split(";")[2] + " (" + self.linelist[2].split(";")[1] + ")"
+        print "-------------------------------------------"
+        print "-------------------------------------------"
+        if self.linelist[3].split(";")[1] == "256":
+            print "Vial: 100mL" + " -> 96 well plate"
+        elif self.linelist[3].split(";")[1] == "1024":
+            print "Vial: 250mL" + " -> 96 well plate"
+        else:
+            print self.linelist[3].split(";")[1] + " -> 96 well plate"
+        print "-------------------------------------------"

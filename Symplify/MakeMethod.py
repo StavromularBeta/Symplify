@@ -12,13 +12,13 @@ MakeMethod, TLLfile = argv
 Header = HeaderGenerator()
 Header_line = Header.header_generator()
 
-Group = GroupGenerator('PeterLevett', 1)
+Group = GroupGenerator('pH_Experiments', 1)
 GroupLine = Group.group_generator()
 
-Test = TestGenerator('Peter', 1)
+Test = TestGenerator('pH_Example', 1)
 TestLine = Test.test_generator()
 
-Step = StepGenerator(1024)
+Step = StepGenerator(256)
 StepTypeLine = Step.step_generator()
 FillerLine = Step.filler_line_generator()
 
@@ -32,3 +32,4 @@ linelist = [Header_line,GroupLine,TestLine,StepTypeLine,FillerLine,DrawLine,Drop
 
 FileGenerator = TLLGenerator(linelist, TLLfile)
 FileGenerator.tll_generator()
+FileGenerator.report_generator()
