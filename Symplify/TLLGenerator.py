@@ -30,17 +30,19 @@ class TLLGenerator():
         This function generates a report on the test produced by the TLL file generated. It is easier to read than the
         TLL file. It currently only is capable of generating the report up to the step type.
         """
-        print "-------------------------------------------"
-        print "-------------------------------------------"
+        self.report_header_generator()
+        self.report_draw_drop_generator()
+
+    def report_header_generator(self):
+        print "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
         for item in self.linelist:
             if item[0] == "G":
                 print "Group: " + item.split(";")[2] + " (" + item.split(";")[1] + ")"
-        print "Test: " + self.linelist[2].split(";")[2] + " (" + self.linelist[2].split(";")[1] + ")"
-        print "-------------------------------------------"
-        print "-------------------------------------------"
-        self.draw_drop_generator()
+            elif item[0] == "T":
+                print "Test: " + item.split(";")[2] + " (" + item.split(";")[1] + ")"
+        print "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
-    def draw_drop_generator(self):
+    def report_draw_drop_generator(self):
         x = 0
         y = 1
         while y < len(self.droplist):
