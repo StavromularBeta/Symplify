@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 class DropGenerator():
 
-    def __init__(self, drop_volume, drop_location):
+    def __init__(self, drop_volume, drop_location, drop_coordinates, change_tip):
         self.drop_volume = drop_volume
         self.drop_location = drop_location
+        self.drop_coordinates = drop_coordinates
+        self.change_tip = change_tip
         self.drop_line = 'string'
 
     def drop_generator(self):
@@ -14,24 +16,30 @@ class DropGenerator():
         return drop_line
 
     def generate_known_variables(self):
-        known_variables = "C;"+str(self.drop_volume)+";"+str(self.drop_location)
+        known_variables_1 = "C;"+str(self.drop_volume)+";"+str(self.drop_location)
+        known_variables_2 = str(self.drop_coordinates[0])+";"+str(self.drop_coordinates[1])
+        known_variables_3 = self.drop_or_not()
+        known_variables = [known_variables_1,known_variables_2,known_variables_3]
         return known_variables
 
+    def drop_or_not(self):
+        if self.change_tip == "Y":
+            return ["262170", "1"]
+        elif self.change_tip == "N":
+            return ["262162", "0"]
+        else:
+            return ["262170", "1"]
+
     def generate_unknown_variables(self, known_variables):
-        unknown_one = 262170
-        unknown_two = 0
-        unknown_three = 0
         unknown_four = 0
         unknown_five = 1
-        unknown_six = 1
         unknown_seven = 0
-        known_and_unknown_variables = [known_variables,
-                                       str(unknown_one),
-                                       str(unknown_two),
-                                       str(unknown_three),
+        known_and_unknown_variables = [known_variables[0],
+                                       known_variables[2][0],
+                                       known_variables[1],
                                        str(unknown_four),
                                        str(unknown_five),
-                                       str(unknown_six),
+                                       known_variables[2][1],
                                        str(unknown_seven)]
         return known_and_unknown_variables
 

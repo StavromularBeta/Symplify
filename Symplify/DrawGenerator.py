@@ -50,7 +50,7 @@ class DrawGenerator():
         unknown_two = 0
         unknown_three = 0
         unknown_four = 0
-        unknown_five = 2
+        unknown_five = 1
         unknown_six = 0
         unknown_seven = 0
         known_and_unknown_variables = [known_variables,
