@@ -10,6 +10,7 @@ class TLLGenerator():
 
     def __init__(self, linelist, TLLfile):
         self.linelist = linelist
+        self.droplist = linelist[5:]
         self.TLLfile = TLLfile
 
     def tll_generator(self):
@@ -31,14 +32,23 @@ class TLLGenerator():
         """
         print "-------------------------------------------"
         print "-------------------------------------------"
-        print "Group: " + self.linelist[1].split(";")[2] + " (" + self.linelist[1].split(";")[1] + ")"
+        for item in self.linelist:
+            if item[0] == "G":
+                print "Group: " + item.split(";")[2] + " (" + item.split(";")[1] + ")"
         print "Test: " + self.linelist[2].split(";")[2] + " (" + self.linelist[2].split(";")[1] + ")"
         print "-------------------------------------------"
         print "-------------------------------------------"
-        if self.linelist[3].split(";")[1] == "256":
-            print "Vial: 100mL" + " -> 96 well plate"
-        elif self.linelist[3].split(";")[1] == "1024":
-            print "Vial: 250mL" + " -> 96 well plate"
-        else:
-            print self.linelist[3].split(";")[1] + " -> 96 well plate"
-        print "-------------------------------------------"
+        self.draw_drop_generator()
+
+    def draw_drop_generator(self):
+        x = 0
+        y = 1
+        while y < len(self.droplist):
+            print self.droplist[x].split(";")[3] + " -> Plate ( " + self.droplist[x].split(";")[1] + " uL )"
+            print "Coordinates = ( " + self.droplist[y].split(";")[5] + ", " + self.droplist[y].split(";")[6] + " )"
+            print "-------------------------------------------"
+            x += 2
+            y += 2
+        return self.droplist
+
+

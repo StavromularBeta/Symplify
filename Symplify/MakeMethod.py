@@ -25,6 +25,7 @@ Draw = DrawGenerator(1.00, '8;Vial 1-1')
 DrawLine = Draw.draw_generator()
 Drop = DropGenerator(1.00, '4;', [1, 0], "Y")
 DropLine = Drop.drop_generator()
+
 Draw_1 = DrawGenerator(2.00, '8;Vial 1-2')
 DrawLine_1 = Draw_1.draw_generator()
 Drop_1 = DropGenerator(2.00, '4;', [1, 0], "Y")
