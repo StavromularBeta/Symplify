@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d6e67c4-552f-460f-be1d-f6d8e0e56655" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Symplify/MakeMethod_multidilutions" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symplify/MakeMethod.py" afterPath="$PROJECT_DIR$/Symplify/MakeMethod.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symplify/MethodMaker.py" afterPath="$PROJECT_DIR$/Symplify/MethodMaker.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symplify/TLLGenerator.py" afterPath="$PROJECT_DIR$/Symplify/TLLGenerator.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symplify/TLLfile" afterPath="$PROJECT_DIR$/Symplify/TLLfile" />
     </list>
     <ignored path="Symplify.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,8 +35,8 @@
       <file leaf-file-name="TLLfile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Symplify/TLLfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-123">
-              <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+            <state relative-caret-position="-617">
+              <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -43,8 +45,8 @@
       <file leaf-file-name="MethodMaker.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Symplify/MethodMaker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+            <state relative-caret-position="282">
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -52,10 +54,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MakeMethod.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MakeMethod.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Symplify/MakeMethod.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-138">
+            <state relative-caret-position="135">
               <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding>
                 <element signature="e#22#63#0" expanded="true" />
@@ -64,11 +66,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TLLGenerator.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StepGenerator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Symplify/StepGenerator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TLLGenerator.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Symplify/TLLGenerator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="50" column="74" selection-start-line="50" selection-start-column="74" selection-end-line="50" selection-end-column="74" />
+            <state relative-caret-position="540">
+              <caret line="36" column="47" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -102,11 +114,11 @@
         <option value="$PROJECT_DIR$/__init__.py" />
         <option value="$PROJECT_DIR$/Symplify/DropGenerator.py" />
         <option value="$PROJECT_DIR$/Symplify/DrawGenerator.py" />
-        <option value="$PROJECT_DIR$/Symplify/TLLfile" />
         <option value="$PROJECT_DIR$/Symplify/TestGenerator.py" />
-        <option value="$PROJECT_DIR$/Symplify/MakeMethod.py" />
-        <option value="$PROJECT_DIR$/Symplify/MethodMaker.py" />
+        <option value="$PROJECT_DIR$/Symplify/TLLfile" />
         <option value="$PROJECT_DIR$/Symplify/TLLGenerator.py" />
+        <option value="$PROJECT_DIR$/Symplify/MethodMaker.py" />
+        <option value="$PROJECT_DIR$/Symplify/MakeMethod.py" />
       </list>
     </option>
   </component>
@@ -855,14 +867,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Symplify/StepGenerator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Symplify/DrawGenerator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="780">
@@ -881,37 +885,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Symplify/TLLfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-123">
-          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+        <state relative-caret-position="-617">
+          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Symplify/MethodMaker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+        <state relative-caret-position="282">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Symplify/TLLGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="47" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Symplify/StepGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Symplify/MakeMethod.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-138">
+        <state relative-caret-position="135">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="e#22#63#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Symplify/TLLGenerator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="50" column="74" selection-start-line="50" selection-start-column="74" selection-end-line="50" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>

@@ -31,7 +31,7 @@ def step_maker(header_list, vial, volume, drop_coordinates, drop_tip):
     return header_list
 
 
-def file_and_report_generator(line_list, TLLfile):
+def file_and_report_maker(line_list, TLLfile):
     file_generator = TLLGenerator(line_list, TLLfile)
     file_generator.tll_generator()
     file_generator.report_generator()
