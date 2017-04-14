@@ -34,21 +34,21 @@ class TLLGenerator():
         self.report_draw_drop_generator()
 
     def report_header_generator(self):
-        print "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+        print "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
         for item in self.linelist:
             if item[0] == "G":
                 print "Group: " + item.split(";")[2] + " (" + item.split(";")[1] + ")"
             elif item[0] == "T":
                 print "Test: " + item.split(";")[2] + " (" + item.split(";")[1] + ")"
-        print "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+        print "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
     def report_draw_drop_generator(self):
         x = 0
         y = 1
         while y < len(self.droplist):
-            print self.droplist[x].split(";")[3] + " -> Plate ( " + self.droplist[x].split(";")[1] + " uL )"
-            print "Coordinates = ( " + self.droplist[y].split(";")[5] + ", " + self.droplist[y].split(";")[6] + " )"
-            print "-------------------------------------------"
+            print self.droplist[x].split(";")[3] + " -> Plate ( " + self.droplist[x].split(";")[1] + " uL )" + \
+                " Coordinates = ( " + self.droplist[y].split(";")[5] + ", " + self.droplist[y].split(";")[6] + " )"
+            print "-------------------------------------------------------"
             x += 2
             y += 2
         return self.droplist

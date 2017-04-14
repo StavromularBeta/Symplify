@@ -21,12 +21,6 @@ def header_maker(group_name, group_number, test_name, test_number):
     return [header_line, group_line, test_line, step_type_line, filler_line]
 
 
-# vial options: '8;Vial 1-1', '8;Vial 1-2', '8;Vial 1-3'
-# units of volume in microlitres. format X.XX
-# drop coordinates - [X,Y].
-# drop_tip = "Y" or "N".
-
-
 def step_maker(header_list, vial, volume, drop_coordinates, drop_tip):
     draw = DrawGenerator(volume, vial)
     draw_line = draw.draw_generator()

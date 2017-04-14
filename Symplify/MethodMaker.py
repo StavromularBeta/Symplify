@@ -5,6 +5,11 @@ MethodMaker, TLLfile = argv
 line_list = mm.header_maker("Peter", 1, "Peter", 1)
 
 #Procedure
+# vial options: '8;Vial 1-1', '8;Vial 1-2', '8;Vial 1-3'
+# units of volume in microlitres. format X.XX
+# drop coordinates - [X,Y].
+# drop_tip = "Y" or "N".
+
 line_list = mm.step_maker(line_list, "8;Vial 1-1", 5.00, [1,0], "N")
 line_list = mm.step_maker(line_list, "8;Vial 1-1", 10.00, [2,0], "N")
 line_list = mm.step_maker(line_list, "8;Vial 1-1", 15.00, [3,0], "Y")
