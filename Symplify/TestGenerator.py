@@ -38,8 +38,6 @@ class TestGenerator():
         return known_variables
 
     def generate_unknown_variables(self, known_variables):
-        #These variables have unknown functions and as such have odd names
-        #Taken straight from the menus that generate these values on the Symbiot side
         max_time = 0
         unknown_one = 0
         utilization = 0

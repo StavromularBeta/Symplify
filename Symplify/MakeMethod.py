@@ -6,33 +6,38 @@ from DrawGenerator import DrawGenerator
 from DropGenerator import DropGenerator
 from HeaderGenerator import HeaderGenerator
 from TLLGenerator import TLLGenerator
-from sys import argv
-MakeMethod, TLLfile = argv
-
-# intro filler stuff.
-Header = HeaderGenerator()
-Header_line = Header.header_generator()
-Group = GroupGenerator('pH_Experiments', 1)
-GroupLine = Group.group_generator()
-Test = TestGenerator('pH_Example', 1)
-TestLine = Test.test_generator()
-Step = StepGenerator(256)
-StepTypeLine = Step.step_generator()
-FillerLine = Step.filler_line_generator()
-
-#the meat of it all.
-Draw = DrawGenerator(1.00, '8;Vial 1-1')
-DrawLine = Draw.draw_generator()
-Drop = DropGenerator(1.00, '4;', [1, 0], "Y")
-DropLine = Drop.drop_generator()
-
-Draw_1 = DrawGenerator(2.00, '8;Vial 1-2')
-DrawLine_1 = Draw_1.draw_generator()
-Drop_1 = DropGenerator(2.00, '4;', [1, 0], "Y")
-DropLine_1 = Drop_1.drop_generator()
 
 
-linelist = [Header_line,GroupLine,TestLine,StepTypeLine,FillerLine,DrawLine,DropLine,DrawLine_1,DropLine_1]
-FileGenerator = TLLGenerator(linelist, TLLfile)
-FileGenerator.tll_generator()
-FileGenerator.report_generator()
+def header_maker(group_name, group_number, test_name, test_number):
+    header = HeaderGenerator()
+    header_line = header.header_generator()
+    group = GroupGenerator(group_name, group_number)
+    group_line = group.group_generator()
+    test = TestGenerator(test_name, test_number)
+    test_line = test.test_generator()
+    step = StepGenerator(256)
+    step_type_line = step.step_generator()
+    filler_line = step.filler_line_generator()
+    return [header_line, group_line, test_line, step_type_line, filler_line]
+
+
+# vial options: '8;Vial 1-1', '8;Vial 1-2', '8;Vial 1-3'
+# units of volume in microlitres. format X.XX
+# drop coordinates - [X,Y].
+# drop_tip = "Y" or "N".
+
+
+def step_maker(header_list, vial, volume, drop_coordinates, drop_tip):
+    draw = DrawGenerator(volume, vial)
+    draw_line = draw.draw_generator()
+    drop = DropGenerator(volume, '4;', drop_coordinates, drop_tip)
+    drop_line = drop.drop_generator()
+    header_list.append(draw_line)
+    header_list.append(drop_line)
+    return header_list
+
+
+def file_and_report_generator(line_list, TLLfile):
+    file_generator = TLLGenerator(line_list, TLLfile)
+    file_generator.tll_generator()
+    file_generator.report_generator()
