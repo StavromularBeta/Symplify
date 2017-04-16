@@ -1,4 +1,7 @@
 #!/usr/bin/env python
+import sys
+
+
 class TLLGenerator():
     """
     This class generates the TLL file, which Symbiot reads.
@@ -45,12 +48,37 @@ class TLLGenerator():
     def report_draw_drop_generator(self):
         x = 0
         y = 1
-        while y < len(self.droplist):
+        while y < len(self.droplist) - 3:
             print self.droplist[x].split(";")[3] + " -> ( " + self.droplist[x].split(";")[1] + " uL )" + \
                 " x,y = ( " + self.droplist[y].split(";")[5] + ", " + self.droplist[y].split(";")[6] + " )"
             print "----------------------------------------"
             x += 2
             y += 2
         return self.droplist
+
+    def error_checker(self):
+        error_checker_characters = self.linelist[1][0] + self.linelist[2][0] + \
+                                   self.linelist[3][0] + self.linelist[4][0] + self.linelist[5][0] + \
+                                   self.linelist[-4][0] + self.linelist[-3][0]
+
+        if error_checker_characters != "GTWSCWS":
+            print "Error"
+            self.determine_error_type(error_checker_characters)
+        else:
+            return "No Errors detected"
+
+    def determine_error_type(self, error_checker_characters):
+        if error_checker_characters[0] == "C":
+            print "Lacking appropriate header. must use header_maker prior to writing any steps. Exiting."
+            sys.exit()
+        elif error_checker_characters[0:5] == "GTWSW":
+            print "No steps detected, only header and footer detected. Exiting."
+            sys.exit()
+        elif error_checker_characters[-2:-1] != "WS":
+            print "Lacking appropriate footer. Must use footer_maker at the end of writing any steps. Exiting."
+            sys.exit()
+        else:
+            print "Error unknown but fatal. Exiting."
+            sys.exit()
 
 

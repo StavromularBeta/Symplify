@@ -36,7 +36,28 @@ class MethodMakerFunctions:
         self.linelist.append(drop_line)
         return self.linelist
 
+    def footer_maker(self):
+        step = StepGenerator(1024)
+        step_type_line = step.step_generator()
+        filler_line = step.filler_line_generator()
+        self.linelist.append(step_type_line)
+        self.linelist.append(filler_line)
+        draw = DrawGenerator(1.00, "1;SAMPLE")
+        draw_line = draw.draw_generator()
+        drop = DropGenerator(1.00, '4;', [0, 0], "Y")
+        drop_line = drop.drop_generator()
+        self.linelist.append(draw_line)
+        self.linelist.append(drop_line)
+        return self.linelist
+
     def file_and_report_maker(self):
         file_generator = TLLGenerator(self.linelist, self.TLLfile)
+        file_generator.error_checker()
         file_generator.tll_generator()
         file_generator.report_generator()
+
+
+#W;1024;
+#S;;1.000;
+#C;1.00;1;SAMPLE;262210;0;0;0;1;0;0;
+#C;1.00;4;;262170;0;0;0;1;1;0;

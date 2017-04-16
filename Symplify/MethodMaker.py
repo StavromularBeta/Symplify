@@ -14,7 +14,7 @@ method.header_maker("Peter", 1, "Peter", 1)
 volume = 1.00
 x_coord = 0
 
-while x_coord < 12:
+while x_coord < 15:
     method.step_maker("8;Vial 1-1", volume, [x_coord, 0], "N")
     volume += float(1.00)
     x_coord += 1
@@ -24,7 +24,7 @@ else:
 vial_2_volume = 13.00
 x_coord = 0
 
-while x_coord < 12:
+while x_coord < 15:
     method.step_maker("8;Vial 1-2", vial_2_volume, [x_coord, 0], "N")
     volume -= float(1.00)
     x_coord += 1
@@ -32,6 +32,7 @@ while x_coord < 12:
 else:
     method.step_maker("8;Vial 1-2", vial_2_volume, [x_coord, 0], "Y")
 
+method.footer_maker()
 method.file_and_report_maker()
 
 
