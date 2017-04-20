@@ -3,7 +3,7 @@ from sys import argv
 MethodMaker, TLLfile = argv
 
 method = mm.MethodMakerFunctions(TLLfile)
-method.header_maker("Peter", 1, "Peter", 1)
+method.header_maker("Peter", 13, "Peter", 1)
 
 #Procedure
 # vial options: '8;Vial 1-1', '8;Vial 1-2', '8;Vial 1-3'
