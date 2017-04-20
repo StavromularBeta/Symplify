@@ -2,7 +2,7 @@
 import sys
 
 
-class StepGenerator():
+class StepGenerator:
 
     def __init__(self, step_type):
         self.step_type = step_type

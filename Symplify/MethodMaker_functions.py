@@ -55,9 +55,3 @@ class MethodMakerFunctions:
         file_generator.error_checker()
         file_generator.tll_generator()
         file_generator.report_generator()
-
-
-#W;1024;
-#S;;1.000;
-#C;1.00;1;SAMPLE;262210;0;0;0;1;0;0;
-#C;1.00;4;;262170;0;0;0;1;1;0;

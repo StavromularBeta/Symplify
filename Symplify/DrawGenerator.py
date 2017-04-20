@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-class DrawGenerator():
+class DrawGenerator:
     """
     This class writes code corresponding to drawing liquid. It needs to be coupled to a drop step.
 

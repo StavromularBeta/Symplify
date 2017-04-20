@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-class TestGenerator():
+class TestGenerator:
     """
     This class generates the test line. This line contains information about the sequence of events in the script. There
     can be multiple tests per group.
@@ -41,8 +41,8 @@ class TestGenerator():
         max_time = 0
         unknown_one = 0
         utilization = 0
-        predilution_rack_optional = ''
-        destination_rack = 'MALDI 10X10 on row 16'
+        predilution_rack_optional = 'Vial1'
+        destination_rack = 'My Fake Maldi Tray'
         known_and_unknown_variables = [known_variables,
                                        str(max_time),
                                        str(unknown_one),
