@@ -13,7 +13,7 @@ class TLLGenerator():
 
     def __init__(self, linelist, TLLfile):
         self.linelist = linelist
-        self.droplist = linelist[5:]
+        self.droplist = linelist[4:]
         self.TLLfile = TLLfile
 
     def tll_generator(self):
@@ -22,10 +22,22 @@ class TLLGenerator():
         followed by a linebreak. It then closes the file.
         """
         target = open(self.TLLfile, 'w')
-        target.truncate()
         for item in self.linelist:
             target.write(item)
             target.write('\n')
+        target.close()
+
+    def previous_file_eraser(self):
+        target = open(self.TLLfile, 'r')
+        lines = target.readlines()
+        target.close()
+        for item in lines:
+            if item[0:-1] == "G;13;Peter;1;0;65;":
+                target_line = lines.index(item)
+                del lines[target_line:]
+        target = open(self.TLLfile, 'w')
+        target.truncate()
+        target.writelines(lines)
         target.close()
 
     def report_generator(self):
@@ -57,8 +69,8 @@ class TLLGenerator():
         return self.droplist
 
     def error_checker(self):
-        error_checker_characters = self.linelist[1][0] + self.linelist[2][0] + \
-                                   self.linelist[3][0] + self.linelist[4][0] + self.linelist[5][0] + \
+        error_checker_characters = self.linelist[0][0] + self.linelist[1][0] + \
+                                   self.linelist[2][0] + self.linelist[3][0] + self.linelist[4][0] + \
                                    self.linelist[-4][0] + self.linelist[-3][0]
 
         if error_checker_characters != "GTWSCWS":

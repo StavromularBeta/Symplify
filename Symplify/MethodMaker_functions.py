@@ -15,8 +15,6 @@ class MethodMakerFunctions:
         self.TLLfile = TLLfile
 
     def header_maker(self, group_name, group_number, test_name, test_number):
-        header = HeaderGenerator()
-        header_line = header.header_generator()
         group = GroupGenerator(group_name, group_number)
         group_line = group.group_generator()
         test = TestGenerator(test_name, test_number)
@@ -24,7 +22,7 @@ class MethodMakerFunctions:
         step = StepGenerator(256)
         step_type_line = step.step_generator()
         filler_line = step.filler_line_generator()
-        self.linelist = [header_line, group_line, test_line, step_type_line, filler_line]
+        self.linelist = [group_line, test_line, step_type_line, filler_line]
         return self.linelist
 
     def step_maker(self, vial, volume, drop_coordinates, drop_tip):
@@ -53,5 +51,6 @@ class MethodMakerFunctions:
     def file_and_report_maker(self):
         file_generator = TLLGenerator(self.linelist, self.TLLfile)
         file_generator.error_checker()
+        file_generator.previous_file_eraser()
         file_generator.tll_generator()
         file_generator.report_generator()
