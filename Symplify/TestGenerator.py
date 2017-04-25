@@ -34,23 +34,34 @@ class TestGenerator:
         return test_line
 
     def generate_known_variables(self):
-        known_variables = 'T;' + str(self.test_number) + ';' + self.test_name
+        """
+        This function first generates known_variables_1, which contains information on the test number and name. it
+        then creates the string that represents the liquid reservoir (this tells symbiot where the vials are). It then
+        creates the string that represents the destination rack (telling symbiot where to put liquid). When you
+        write drop commands, you tell Symbiot to drop in the destination rack, and this destination rack is defined by
+        this variable in this line. These three variables are returned as the list known_variables.
+        """
+        known_variables_1 = 'T;' + str(self.test_number) + ';' + self.test_name
+        liquid_reservoir_location = 'Vial1'
+        destination_rack = 'My Fake Maldi tray'
+        known_variables = [known_variables_1, liquid_reservoir_location, destination_rack]
         return known_variables
 
     def generate_unknown_variables(self, known_variables):
+        """This function first generates the three unknown variables, combines them with the known ones, and returns
+        all variables as a list - the order of this list is important."""
         max_time = 0
         unknown_one = 0
         utilization = 0
-        predilution_rack_optional = 'Vial1'
-        destination_rack = 'My Fake Maldi Tray'
-        known_and_unknown_variables = [known_variables,
+        known_and_unknown_variables = [known_variables[0],
                                        str(max_time),
                                        str(unknown_one),
                                        str(utilization),
-                                       str(predilution_rack_optional),
-                                       str(destination_rack)]
+                                       known_variables[1],
+                                       known_variables[2]]
         return known_and_unknown_variables
 
     def test_line_generator(self, known_and_unknown_variables):
+        """This function generates the actual line of code Symbiot reads, it joins the variables up with semicolons."""
         test_line = ';'.join(known_and_unknown_variables)+';'
         return test_line

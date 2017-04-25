@@ -48,8 +48,6 @@ class GroupGenerator():
         The function then combines the known_variable string, and all of the unknown variables as strings, in a list.
         It returns this list.
         """
-        #These variables have unknown functions and as such have odd names
-        #Taken straight from the menus that generate these values on the Symbiot side
         max_tests_per_plate = 1
         output_formats = 0
         optimizing_mode = 65
