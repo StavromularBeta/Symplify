@@ -49,7 +49,7 @@ class TLLGenerator():
         lines = target.readlines()
         target.close()
         for item in lines:
-            if item[0:-1] == "G;13;Peter;1;0;65;":
+            if item[0:-1] == "G;13;DoNotChangeThisString;1;0;65;":
                 target_line = lines.index(item)
                 del lines[target_line:]
         target = open(self.TLLfile, 'w')
@@ -72,10 +72,8 @@ class TLLGenerator():
         """
         print "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
         for item in self.linelist:
-            if item[0] == "G":
-                print "Group: " + item.split(";")[2] + " (" + item.split(";")[1] + ")"
-            elif item[0] == "T":
-                print "Test: " + item.split(";")[2] + " (" + item.split(";")[1] + ")"
+            if item[0] == "T":
+                print "Test Name: " + item.split(";")[2]
         print "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
     def report_draw_drop_generator(self):

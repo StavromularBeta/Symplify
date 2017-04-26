@@ -1,9 +1,8 @@
 import MethodMaker_functions as mm
-from sys import argv
-MethodMaker, TLLfile = argv
 
-method = mm.MethodMakerFunctions(TLLfile)
-method.header_maker("Peter", 13, "Peter", 1)
+FilePath = "/Users/PeterLevett/Documents/My Actual Documents/Work Study/Symplify/Symplify/TLLfile"
+method = mm.MethodMakerFunctions(FilePath)
+method.header_maker("pH_study")
 
 #Procedure
 # vial options: '8;Vial 1-1', '8;Vial 1-2', '8;Vial 1-3'
@@ -14,8 +13,8 @@ method.header_maker("Peter", 13, "Peter", 1)
 volume = 1.00
 x_coord = 0
 
-while x_coord < 10:
-    method.step_maker("8;Vial 1-1", volume, [x_coord, 0], "N")
+while x_coord < 6:
+    method.step_maker("8;Vial 1-1", volume, [x_coord, 0])
     volume += float(1.00)
     x_coord += 1
 else:
@@ -24,15 +23,14 @@ else:
 vial_2_volume = 10.00
 x_coord = 0
 
-while x_coord < 10:
-    method.step_maker("8;Vial 1-2", vial_2_volume, [x_coord, 0], "N")
+while x_coord < 6:
+    method.step_maker("8;Vial 1-2", vial_2_volume, [x_coord, 0])
     volume -= float(1.00)
     x_coord += 1
     vial_2_volume -= 1
 else:
     method.step_maker("8;Vial 1-2", vial_2_volume, [x_coord, 0], "Y")
 
-method.footer_maker()
 method.file_and_report_maker()
 
 
