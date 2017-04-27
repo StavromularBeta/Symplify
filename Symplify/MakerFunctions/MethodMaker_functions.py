@@ -1,11 +1,11 @@
 #!/usr/bin/env python
-from GroupGenerator import GroupGenerator
-from TestGenerator import TestGenerator
-from StepGenerator import StepGenerator
-from DrawGenerator import DrawGenerator
-from DropGenerator import DropGenerator
-from HeaderGenerator import HeaderGenerator
-from TLLGenerator import TLLGenerator
+
+from Generators.GroupGenerator import GroupGenerator
+from Generators.TestGenerator import TestGenerator
+from Generators.StepGenerator import StepGenerator
+from Generators.DrawGenerator import DrawGenerator
+from Generators.DropGenerator import DropGenerator
+from Generators.TLLGenerator import TLLGenerator
 
 
 class MethodMakerFunctions:
