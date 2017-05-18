@@ -1,0 +1,83 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module Symplify.MakerFunctions.MethodMaker_functions</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="Symplify.html"><font color="#ffffff">Symplify</font></a>.<a href="Symplify.MakerFunctions.html"><font color="#ffffff">MakerFunctions</font></a>.MethodMaker_functions</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/PeterLevett/Documents/My Actual Documents/Work Study/Symplify/Symplify/MakerFunctions/MethodMaker_functions.py">/Users/PeterLevett/Documents/My Actual Documents/Work Study/Symplify/Symplify/MakerFunctions/MethodMaker_functions.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="Symplify.Symplify.MakerFunctions.MethodMaker_functions.html#MethodMakerFunctions">MethodMakerFunctions</a>
+</font></dt></dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MethodMakerFunctions">class <strong>MethodMakerFunctions</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>This&nbsp;class&nbsp;contains&nbsp;functions&nbsp;that&nbsp;call&nbsp;Generator&nbsp;methods&nbsp;to&nbsp;make&nbsp;routines&nbsp;that&nbsp;allow&nbsp;a&nbsp;user&nbsp;to&nbsp;quickly&nbsp;make<br>
+tests&nbsp;-&nbsp;MethodMaker.py&nbsp;is&nbsp;an&nbsp;example&nbsp;of&nbsp;a&nbsp;file&nbsp;that&nbsp;uses&nbsp;<a href="#MethodMakerFunctions">MethodMakerFunctions</a>&nbsp;to&nbsp;create&nbsp;a&nbsp;sample&nbsp;test.&nbsp;It&nbsp;is&nbsp;an<br>
+extra&nbsp;layer&nbsp;of&nbsp;abstraction&nbsp;over&nbsp;the&nbsp;more&nbsp;raw&nbsp;Generator&nbsp;methods.<br>
+&nbsp;<br>
+method&nbsp;hierarchy:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;header_maker<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GroupGenerator.group_generator<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TestGenerator.test_generator<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;StepGenerator.step_generator<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;StepGenerator.filler_line_generator<br>
+&nbsp;&nbsp;&nbsp;&nbsp;step_maker<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DrawGenerator.draw_generator<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DropGenerator.drop_generator<br>
+&nbsp;&nbsp;&nbsp;&nbsp;footer_maker<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;StepGenerator.step_generator<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;StepGenerator.filler_line_generator<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DrawGenerator.draw_generator<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DropGenerator.drop_generator<br>
+&nbsp;&nbsp;&nbsp;&nbsp;file_and_report_maker<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;footer_maker<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TLLGenerator.error_checker<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TLLGenerator.previous_file_eraser<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TLLGenerator.tll_generator<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TLLGenerator.report_generator<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="MethodMakerFunctions-__init__"><strong>__init__</strong></a>(self, TLLfile, linelist<font color="#909090">=[]</font>)</dt><dd><tt>The&nbsp;TLLfile&nbsp;is&nbsp;the&nbsp;filepath&nbsp;of&nbsp;the&nbsp;text&nbsp;file&nbsp;that&nbsp;the&nbsp;instructions&nbsp;are&nbsp;written&nbsp;to.&nbsp;This&nbsp;can&nbsp;be&nbsp;hardcoded&nbsp;in&nbsp;once<br>
+development&nbsp;is&nbsp;done,&nbsp;because&nbsp;it&nbsp;is&nbsp;only&nbsp;necessary&nbsp;when&nbsp;working&nbsp;on&nbsp;a&nbsp;different&nbsp;computer&nbsp;than&nbsp;the&nbsp;one&nbsp;that&nbsp;the<br>
+workstation&nbsp;is&nbsp;connected&nbsp;to.&nbsp;The&nbsp;linelist&nbsp;is&nbsp;an&nbsp;empty&nbsp;list&nbsp;by&nbsp;default.&nbsp;It&nbsp;is&nbsp;populated&nbsp;as&nbsp;the&nbsp;various&nbsp;methods<br>
+are&nbsp;called.</tt></dd></dl>
+
+<dl><dt><a name="MethodMakerFunctions-file_and_report_maker"><strong>file_and_report_maker</strong></a>(self)</dt><dd><tt>this&nbsp;method&nbsp;first&nbsp;makes&nbsp;the&nbsp;footer&nbsp;line,&nbsp;then&nbsp;creates&nbsp;a&nbsp;TLLGenerator&nbsp;object.&nbsp;It&nbsp;runs&nbsp;the&nbsp;error_checker&nbsp;routines,<br>
+erases&nbsp;the&nbsp;old&nbsp;test&nbsp;in&nbsp;the&nbsp;TLL&nbsp;file,&nbsp;writes&nbsp;the&nbsp;new&nbsp;test,&nbsp;and&nbsp;generates&nbsp;a&nbsp;report&nbsp;on&nbsp;the&nbsp;test&nbsp;created.</tt></dd></dl>
+
+<dl><dt><a name="MethodMakerFunctions-footer_maker"><strong>footer_maker</strong></a>(self)</dt><dd><tt>footer&nbsp;maker&nbsp;creates&nbsp;the&nbsp;footer&nbsp;lines,&nbsp;which&nbsp;is&nbsp;a&nbsp;transfer&nbsp;from&nbsp;the&nbsp;sample&nbsp;rack&nbsp;(which&nbsp;is&nbsp;empty)&nbsp;to&nbsp;the&nbsp;plate,<br>
+which&nbsp;in&nbsp;essence&nbsp;does&nbsp;nothing&nbsp;-&nbsp;but&nbsp;at&nbsp;least&nbsp;one&nbsp;sample&nbsp;step&nbsp;is&nbsp;required&nbsp;per&nbsp;test,&nbsp;or&nbsp;the&nbsp;symbiot&nbsp;software<br>
+fails.&nbsp;It&nbsp;generates&nbsp;the&nbsp;step&nbsp;line&nbsp;and&nbsp;filler&nbsp;line&nbsp;(step&nbsp;number&nbsp;for&nbsp;sample&nbsp;steps&nbsp;is&nbsp;1024).&nbsp;It&nbsp;then&nbsp;draws&nbsp;a<br>
+microlitre&nbsp;of&nbsp;nothing&nbsp;and&nbsp;adds&nbsp;it&nbsp;to&nbsp;the&nbsp;fist&nbsp;position&nbsp;on&nbsp;the&nbsp;plate.&nbsp;It&nbsp;updates&nbsp;and&nbsp;returns&nbsp;the&nbsp;linelist.</tt></dd></dl>
+
+<dl><dt><a name="MethodMakerFunctions-header_maker"><strong>header_maker</strong></a>(self, test_name, group_name<font color="#909090">='DoNotChangeThisString'</font>, group_number<font color="#909090">=13</font>, test_number<font color="#909090">=1</font>)</dt><dd><tt>The&nbsp;header&nbsp;maker&nbsp;file&nbsp;is&nbsp;passed&nbsp;the&nbsp;test&nbsp;name.&nbsp;The&nbsp;group&nbsp;name,&nbsp;number,&nbsp;and&nbsp;test&nbsp;number&nbsp;can&nbsp;optionally<br>
+be&nbsp;changed,&nbsp;but&nbsp;then&nbsp;there&nbsp;may&nbsp;be&nbsp;issues&nbsp;working&nbsp;with&nbsp;the&nbsp;symbiot&nbsp;software&nbsp;-&nbsp;changes&nbsp;would&nbsp;have&nbsp;to&nbsp;be&nbsp;hard-coded<br>
+on&nbsp;that&nbsp;end.&nbsp;It&nbsp;generates&nbsp;the&nbsp;group&nbsp;line&nbsp;with&nbsp;the&nbsp;group_name&nbsp;and&nbsp;group_number,&nbsp;generates&nbsp;the&nbsp;test&nbsp;line<br>
+with&nbsp;the&nbsp;test_name&nbsp;and&nbsp;test_number,&nbsp;and&nbsp;generates&nbsp;the&nbsp;step&nbsp;type&nbsp;line&nbsp;(256&nbsp;applies&nbsp;to&nbsp;all&nbsp;the&nbsp;steps&nbsp;prior&nbsp;to&nbsp;the<br>
+footer)&nbsp;+&nbsp;filler&nbsp;line.&nbsp;It&nbsp;combines&nbsp;all&nbsp;these&nbsp;lines&nbsp;in&nbsp;an&nbsp;ordered&nbsp;list&nbsp;and&nbsp;returns&nbsp;it,&nbsp;updates&nbsp;the&nbsp;linelist.</tt></dd></dl>
+
+<dl><dt><a name="MethodMakerFunctions-step_maker"><strong>step_maker</strong></a>(self, vial, volume, drop_coordinates, drop_tip<font color="#909090">='N'</font>)</dt><dd><tt>each&nbsp;call&nbsp;of&nbsp;step_maker&nbsp;requires&nbsp;you&nbsp;to&nbsp;provide&nbsp;the&nbsp;vial,&nbsp;which&nbsp;is&nbsp;the&nbsp;vial&nbsp;liquid&nbsp;is&nbsp;being&nbsp;transferred&nbsp;from,<br>
+the&nbsp;volume&nbsp;of&nbsp;liquid&nbsp;being&nbsp;transferred,&nbsp;the&nbsp;drop_coordinates&nbsp;(the&nbsp;x&nbsp;and&nbsp;y&nbsp;value&nbsp;of&nbsp;the&nbsp;well&nbsp;on&nbsp;the&nbsp;plate&nbsp;you<br>
+want&nbsp;to&nbsp;drop&nbsp;the&nbsp;liquid&nbsp;in)&nbsp;and&nbsp;instructions&nbsp;on&nbsp;whether&nbsp;or&nbsp;not&nbsp;to&nbsp;drop&nbsp;the&nbsp;tip&nbsp;(default&nbsp;is&nbsp;no).&nbsp;It&nbsp;generates<br>
+the&nbsp;draw&nbsp;line&nbsp;with&nbsp;volume&nbsp;and&nbsp;vial,&nbsp;generates&nbsp;the&nbsp;drop&nbsp;line&nbsp;with&nbsp;volume,&nbsp;drop_coordinates,&nbsp;and&nbsp;drop_tip.&nbsp;It<br>
+then&nbsp;appends&nbsp;the&nbsp;new&nbsp;steps&nbsp;to&nbsp;the&nbsp;linelist&nbsp;and&nbsp;returns&nbsp;the&nbsp;linelist.&nbsp;step_maker&nbsp;makes&nbsp;one&nbsp;step.</tt></dd></dl>
+
+</td></tr></table></td></tr></table>
+</body></html>

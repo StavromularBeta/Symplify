@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-class GroupGenerator():
+class GroupGenerator:
     """
     This class generates the line of code corresponding to the group that a particular test belongs to.
 

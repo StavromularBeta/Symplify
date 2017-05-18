@@ -34,6 +34,7 @@ class MethodMakerFunctions:
             TLLGenerator.tll_generator
             TLLGenerator.report_generator
     """
+
     def __init__(self, TLLfile, linelist=[]):
         """
         The TLLfile is the filepath of the text file that the instructions are written to. This can be hardcoded in once
