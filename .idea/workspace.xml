@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d6e67c4-552f-460f-be1d-f6d8e0e56655" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DOCUMENTATION/Symplify.Symplify.DrawGenerator.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DOCUMENTATION/Symplify.Symplify.DropGenerator.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DOCUMENTATION/Symplify.Symplify.GroupGenerator.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DOCUMENTATION/Symplify.Symplify.HeaderGenerator.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DOCUMENTATION/Symplify.Symplify.TLLGenerator.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DOCUMENTATION/Symplify.Symplify.TestGenerator.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DOCUMENTATION/Symplify.Symplify.html" afterPath="$PROJECT_DIR$/DOCUMENTATION/Symplify.Symplify.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symplify/Generators/StepGenerator.py" afterPath="$PROJECT_DIR$/Symplify/Generators/StepGenerator.py" />
     </list>
     <ignored path="Symplify.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,11 +47,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StepGenerator.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StepGenerator.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Symplify/Generators/StepGenerator.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
               <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DropGenerator.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Symplify/Generators/DropGenerator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -574,13 +576,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GUI/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -846,6 +841,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Symplify/Generators/DropGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
