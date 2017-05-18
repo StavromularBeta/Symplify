@@ -35,17 +35,34 @@
 <td colspan=3 valign=bottom>&nbsp;<br>
 <font color="#000000" face="helvetica, arial"><a name="StepGenerator">class <strong>StepGenerator</strong></a></font></td></tr>
     
-<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>This&nbsp;class&nbsp;writes&nbsp;the&nbsp;code&nbsp;corresponding&nbsp;to&nbsp;the&nbsp;step&nbsp;type.&nbsp;There&nbsp;are&nbsp;various&nbsp;step<br>
+types&nbsp;recognized&nbsp;by&nbsp;the&nbsp;symbiot&nbsp;software.&nbsp;At&nbsp;the&nbsp;moment,&nbsp;these&nbsp;step&nbsp;types&nbsp;are&nbsp;<br>
+hardcoded&nbsp;in&nbsp;when&nbsp;required&nbsp;by&nbsp;the&nbsp;Maker.py&nbsp;classes.&nbsp;<br>
+&nbsp;<br>
+Method&nbsp;Hierarchy:<br>
+step_generator<br>
+&nbsp;&nbsp;&nbsp;&nbsp;check_if_valid_step<br>
+&nbsp;&nbsp;&nbsp;&nbsp;exit_if_invalid_step<br>
+filler_line_generator<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
 <td width="100%">Methods defined here:<br>
-<dl><dt><a name="StepGenerator-__init__"><strong>__init__</strong></a>(self, step_type)</dt></dl>
+<dl><dt><a name="StepGenerator-__init__"><strong>__init__</strong></a>(self, step_type)</dt><dd><tt>the&nbsp;step_type&nbsp;is&nbsp;the&nbsp;step&nbsp;type.&nbsp;256&nbsp;is&nbsp;the&nbsp;value&nbsp;for&nbsp;any&nbsp;vial&nbsp;transfer-to-plate&nbsp;steps.<br>
+1024&nbsp;is&nbsp;the&nbsp;value&nbsp;for&nbsp;the&nbsp;footer&nbsp;step,&nbsp;which&nbsp;is&nbsp;required&nbsp;at&nbsp;the&nbsp;end&nbsp;of&nbsp;a&nbsp;script.</tt></dd></dl>
 
-<dl><dt><a name="StepGenerator-check_if_valid_step"><strong>check_if_valid_step</strong></a>(self, step_type)</dt></dl>
+<dl><dt><a name="StepGenerator-check_if_valid_step"><strong>check_if_valid_step</strong></a>(self, step_type)</dt><dd><tt>This&nbsp;function&nbsp;checks&nbsp;to&nbsp;see&nbsp;if&nbsp;int(step_type)&nbsp;is&nbsp;in&nbsp;the&nbsp;list&nbsp;valid_steps,&nbsp;which<br>
+contains&nbsp;5&nbsp;int&nbsp;values.&nbsp;If&nbsp;it&nbsp;is,&nbsp;int(step_type)&nbsp;is&nbsp;returned.&nbsp;If&nbsp;it&nbsp;isn't,&nbsp;the&nbsp;string<br>
+'StepError'&nbsp;is&nbsp;returned.</tt></dd></dl>
 
-<dl><dt><a name="StepGenerator-exit_if_invalid_step"><strong>exit_if_invalid_step</strong></a>(self, step_type)</dt></dl>
+<dl><dt><a name="StepGenerator-exit_if_invalid_step"><strong>exit_if_invalid_step</strong></a>(self, step_type)</dt><dd><tt>This&nbsp;function&nbsp;checks&nbsp;to&nbsp;see&nbsp;if&nbsp;step_type&nbsp;is&nbsp;'StepError'.&nbsp;If&nbsp;it&nbsp;is,&nbsp;it&nbsp;prints&nbsp;an&nbsp;error<br>
+message&nbsp;and&nbsp;exits&nbsp;the&nbsp;script.</tt></dd></dl>
 
-<dl><dt><a name="StepGenerator-filler_line_generator"><strong>filler_line_generator</strong></a>(self)</dt></dl>
+<dl><dt><a name="StepGenerator-filler_line_generator"><strong>filler_line_generator</strong></a>(self)</dt><dd><tt>This&nbsp;function&nbsp;generates&nbsp;the&nbsp;filler&nbsp;line.&nbsp;Not&nbsp;much&nbsp;is&nbsp;known&nbsp;about&nbsp;the&nbsp;filler&nbsp;line,<br>
+or&nbsp;what&nbsp;it&nbsp;does.</tt></dd></dl>
 
-<dl><dt><a name="StepGenerator-step_generator"><strong>step_generator</strong></a>(self)</dt></dl>
+<dl><dt><a name="StepGenerator-step_generator"><strong>step_generator</strong></a>(self)</dt><dd><tt>This&nbsp;function&nbsp;generates&nbsp;the&nbsp;step&nbsp;line.&nbsp;It&nbsp;checks&nbsp;if&nbsp;the&nbsp;step&nbsp;is&nbsp;valid&nbsp;-&nbsp;i.e.,&nbsp;it&nbsp;is<br>
+one&nbsp;of&nbsp;the&nbsp;5&nbsp;steps&nbsp;possible&nbsp;(note&nbsp;that&nbsp;currently&nbsp;only&nbsp;two&nbsp;steps&nbsp;are&nbsp;used).&nbsp;It&nbsp;exits<br>
+if&nbsp;the&nbsp;step&nbsp;is&nbsp;invalid.&nbsp;Otherwise,&nbsp;it&nbsp;writes&nbsp;the&nbsp;correct&nbsp;line&nbsp;and&nbsp;returns&nbsp;it.</tt></dd></dl>
 
 </td></tr></table></td></tr></table>
 </body></html>
