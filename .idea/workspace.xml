@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d6e67c4-552f-460f-be1d-f6d8e0e56655" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DOCUMENTATION/Symplify.Symplify.MakerFunctions.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DOCUMENTATION/Symplify.Symplify.MethodMaker.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symplify/Generators/GroupGenerator.py" afterPath="$PROJECT_DIR$/Symplify/Generators/GroupGenerator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symplify/MakerFunctions/MethodMaker_functions.py" afterPath="$PROJECT_DIR$/Symplify/MakerFunctions/MethodMaker_functions.py" />
     </list>
     <ignored path="Symplify.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -247,7 +243,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/PeterLevett/Documents/Y5S1/CHEM398/Symplify/Symplify/TestGenerator.py" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../SideProjects/GDD" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
