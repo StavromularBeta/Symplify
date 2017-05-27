@@ -10,10 +10,10 @@ documentation of any folder or file (if it exists) by entering 'pydoc (name of f
 you can access the latest version of the project (and all previous versions) at:
 https://github.com/StavromularBeta/Symplify
 
-vialholder.svg is a Scalable Vector Graphics file containing blueprints for the vial holders used in the setup.
+the LaserBlueprints folder contains .svg files that can be read by a laser printer to create custom holders for Symbiot.
 
 SampleMethod.py contains an example of a working method.
 
 This software was written by Peter Levett, an undergraduate student with the Hore Group, University of Victoria, Canada.
 
-this readme was last updated May 24th, 2017.
+this readme was last updated May 26th, 2017.
