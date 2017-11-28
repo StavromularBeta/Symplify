@@ -5,7 +5,7 @@ from SampleRackGenerator import SampleRackGenerator
 
 # for the grid
 wells_in_row = 8
-wells_in_column = 8
+wells_in_column = 12
 radius_of_wells = 20
 last_well = wells_in_row*wells_in_column
 
