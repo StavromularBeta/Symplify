@@ -4,8 +4,7 @@ Symplify is a python library designed to work with the Symbiot workstation. It i
 
 To access the documentation, open QuickDocs.html in an internet browser of your choice. You can also access the documentation of any folder or file (if it exists) by entering 'pydoc (name of file or folder)' into the terminal.
 
-you can access the latest version of the project (and all previous versions) at:
-https://github.com/StavromularBeta/Symplify
+you can access the latest version of the project (and all previous versions) Here[https://github.com/StavromularBeta/Symplify]
 
 the LaserBlueprints folder contains .svg files that can be read by a laser printer to create custom holders for Symbiot.
 
